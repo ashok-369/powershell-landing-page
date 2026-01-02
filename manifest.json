@@ -1,0 +1,17 @@
+
+{
+  "short_name": "NeelTech",
+  "name": "Neel Technologies Training",
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/7.x/avataaars/svg?seed=Logo",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FAF3E6",
+  "display": "standalone",
+  "theme_color": "#8B5A2B",
+  "description": "Premium PowerShell AWS Solutions Architect Course"
+}

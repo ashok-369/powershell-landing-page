@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-padding-top: 5.5rem;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/neelLogo.svg"/>
+    <title>Neel Technologies | PowerShell AWS Solutions Architect Course</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#004C8B">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#004C8B',      /* Brand Blue */
+              secondary: '#F58220',    /* Brand Orange */
+              accent: '#00A3E0',       /* Sky Blue */
+              deep: '#1B2B3A',         /* Deep Navy */
+              cream: '#F8FAFC',        /* Cloud White */
+              lightCream: '#E2E8F0',   /* Light Slate */
+              redBrown: '#E65100',     /* Deep Orange */
+              success: '#10B981',
+              warning: '#F59E0B',
+              error: '#EF4444',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            fontSize: {
+              'h1': ['64px', { lineHeight: '72px', fontWeight: '800' }],
+              'h2': ['48px', { lineHeight: '56px', fontWeight: '700' }],
+              'h3': ['32px', { lineHeight: '40px', fontWeight: '600' }],
+              'h4': ['24px', { lineHeight: '32px', fontWeight: '600' }],
+              'body-lg': ['20px', '32px'],
+              'body': ['16px', '28px'],
+              'body-sm': ['14px', '20px'],
+            },
+            boxShadow: {
+              'premium': '0 20px 40px rgba(0, 76, 139, 0.12)',
+              'premium-hover': '0 24px 48px rgba(0, 76, 139, 0.18)',
+              'button': '0 8px 24px rgba(245, 130, 32, 0.3)',
+              'card': '0 12px 32px rgba(27, 43, 58, 0.08)',
+            },
+            borderRadius: {
+              'card': '20px',
+              'button': '12px',
+            },
+            spacing: {
+              '18': '4.5rem',
+              '24': '6rem',
+              '32': '8rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { -webkit-font-smoothing: antialiased; }
+      .perspective-1000 { perspective: 1000px; }
+      .reveal { opacity: 0; transform: translateY(30px); }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .dark .glass-effect {
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .dark body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      .brand-logo-circle {
+        border: 2px solid #F58220;
+        outline: 2px solid #004C8B;
+        outline-offset: 2px;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.3/client",
+    "lucide-react": "https://esm.sh/lucide-react@^0.474.0",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@^3.14.2/ScrollTrigger",
+    "gsap/TextPlugin": "https://esm.sh/gsap@^3.14.2/TextPlugin",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cream font-sans text-deep overflow-x-hidden transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="index.jsx"></script>
+  <!-- <script type="module" src="/index.tsx"></script> -->
+</body>
+</html>
