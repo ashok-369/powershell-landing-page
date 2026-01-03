@@ -24,6 +24,7 @@ const BatchSchedule = lazy(() => import('./components/Sections/BatchSchedule').t
 const Testimonials = lazy(() => import('./components/Sections/Testimonials').then(m => ({ default: m.Testimonials })));
 const FAQ = lazy(() => import('./components/Sections/FAQ').then(m => ({ default: m.FAQ })));
 const Contact = lazy(() => import('./components/Sections/Contact').then(m => ({ default: m.Contact })));
+const Benefits = lazy(() => import('./components/Sections/Benefits').then(m => ({ default: m.Benefits })));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,8 +80,9 @@ const App = () => {
           <div className="reveal">
             <Stats />
           </div>
-
+          <Benefits />
           <About />
+          
 
           <div className="relative h-24 bg-cream dark:bg-zinc-950 overflow-hidden">
             <svg className="absolute bottom-0 w-full h-full text-lightCream dark:text-zinc-900/50" viewBox="0 0 1440 320" preserveAspectRatio="none">

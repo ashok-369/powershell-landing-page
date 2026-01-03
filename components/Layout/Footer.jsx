@@ -76,7 +76,7 @@ export const Footer = () => {
               </div> */}
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
-              Empowering IT professionals since 2012 with world-class cloud automation and PowerShell training. ISO Certified Training Partner.
+              Empowering IT professionals since 2020 with world-class cloud automation and PowerShell training. ISO Certified Training Partner.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><Facebook size={18} /></a>
@@ -155,7 +155,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/30 text-xs font-medium">© 2024 Neel Technologies. All Rights Reserved.</p>
+          <p className="text-white/30 text-xs font-medium">© 2026 Neel Technologies. All Rights Reserved.</p>
           {/* <div className="flex gap-8 text-white/30 text-xs font-medium">
             <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="hover:text-white">Privacy Policy</a>
             <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="hover:text-white">Terms of Service</a>

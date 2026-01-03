@@ -65,7 +65,7 @@ export const CalendarModal = ({ isOpen, onClose }) => {
                     <h3 className="font-heading font-bold text-deep dark:text-white">Select Date</h3>
                     <div className="flex gap-2">
                       <ChevronLeft size={18} className="text-deep/20 cursor-not-allowed" />
-                      <span className="text-xs font-bold uppercase tracking-widest text-primary">October 2024</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary">January 2026</span>
                       <ChevronRight size={18} className="text-deep/20 cursor-not-allowed" />
                     </div>
                   </div>

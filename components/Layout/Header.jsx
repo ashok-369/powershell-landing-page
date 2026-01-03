@@ -103,8 +103,8 @@ export const Header = () => {
   };
 
   return (
-    <header className={`relative w-full transition-all duration-500 ${isScrolled ? 'bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl shadow-premium py-3' : 'bg-transparent py-6'}`}>
-      <div className="container mx-auto max-w-[1280px] px-6 flex items-center justify-between">
+    <header className={`  relative w-full transition-all  duration-500 ${isScrolled ? 'bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl shadow-premium py-3' : 'bg-transparent py-6'}`}>
+      <div className=" container mx-auto max-w-[1280px] px-6 flex items-center justify-between">
         <a 
           href="#home" 
           className="flex items-center gap-4 group cursor-pointer" 

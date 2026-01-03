@@ -54,7 +54,7 @@ export const Stats = () => {
           />
           <StatCard 
             icon={<Users size={32} />} 
-            value={1500} 
+            value={3000} 
             suffix="+" 
             label={t('stats_students')} 
           />

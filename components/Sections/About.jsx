@@ -36,7 +36,7 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 space-y-8">
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-2">
-              Established 2012
+              Established 2020
             </div>
             <h2 className="text-h2 text-deep dark:text-white leading-tight">{t('about_title')}</h2>
             <p className="text-body-lg text-deep/70 dark:text-white/60 leading-relaxed">
