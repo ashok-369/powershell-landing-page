@@ -1,8 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X,PlayCircle, Phone, ChevronDown, MessageCircle } from 'lucide-react';
-import { gsap } from 'gsap';
-import { Button } from '../UI/Button';
-import { useTranslation } from '../UI/LanguageToggle';
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Menu,
+  X,
+  PlayCircle,
+  Phone,
+  ChevronDown,
+  MessageCircle,
+} from "lucide-react";
+import { gsap } from "gsap";
+import { Button } from "../UI/Button";
+import { useTranslation } from "../UI/LanguageToggle";
 import neelLogo from "../../assets/neelLogo.png";
 
 export const Header = () => {
@@ -17,11 +24,11 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     if (logoCircleRef.current && logoNRef.current && logoTRef.current) {
       const tl = gsap.timeline({
-        defaults: { ease: "back.out(1.7)", duration: 0.8 }
+        defaults: { ease: "back.out(1.7)", duration: 0.8 },
       });
 
       tl.fromTo(
@@ -36,25 +43,25 @@ export const Header = () => {
       );
     }
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: t('nav_home'), href: 'home' },
-    { name: t('nav_about'), href: 'about' },
+    { name: t("nav_home"), href: "home" },
+    { name: t("nav_about"), href: "about" },
     {
-      name: 'Why Choose Us',
-      href: 'why-choose-us',
+      name: "Why Choose Us",
+      href: "why-choose-us",
       dropdown: [
-        { name: 'Expert Trainers', href: 'trainers' },
-        { name: 'Hands-on Labs', href: 'labs' },
-        { name: 'Placement Support', href: 'placement' },
-        { name: 'Flexible Schedule', href: 'feature-schedule' },
-      ]
+        { name: "Expert Trainers", href: "trainers" },
+        { name: "Hands-on Labs", href: "labs" },
+        { name: "Placement Support", href: "placement" },
+        { name: "Flexible Schedule", href: "feature-schedule" },
+      ],
     },
-    { name: t('nav_syllabus'), href: 'curriculum' },
-    { name: t('nav_testimonials'), href: 'testimonials' },
-    { name: t('nav_faq'), href: 'faq' },
+    { name: t("nav_syllabus"), href: "curriculum" },
+    { name: t("nav_testimonials"), href: "testimonials" },
+    { name: t("nav_faq"), href: "faq" },
     // { name: t('Enroll Now'), href: 'enroll-now' },
   ];
 
@@ -63,18 +70,19 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
     setIsDropdownOpen(false);
 
-    if (targetId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (targetId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const element = document.getElementById(targetId);
       if (element) {
         const headerHeight = isScrolled ? 70 : 100;
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerHeight;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }
@@ -83,21 +91,34 @@ export const Header = () => {
   return (
     <>
       {/* Header */}
-      <header className={`relative w-full transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen
-          ? 'bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl shadow-premium py-3'
-          : 'bg-[#00467f] py-6'
-      }`}>
+      <header
+        className={`relative w-full transition-all duration-500 ${
+          isScrolled || isMobileMenuOpen
+            ? "bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl shadow-premium py-3"
+            : "bg-[#00467f] py-6"
+        }`}
+      >
         <div className="container mx-auto max-w-[1280px] px-6 flex items-center justify-between">
-          
           {/* Logo */}
           <a
             href="#home"
             className="flex items-center gap-4 cursor-pointer"
-            onClick={(e) => handleNavClick(e, 'home')}
+            onClick={(e) => handleNavClick(e, "home")}
           >
             <img src={neelLogo} alt="Neel Logo" className="w-12 h-auto" />
           </a>
+          {/* Mobile Join Free Demo Button */}
+          <button
+            onClick={() =>
+              window.open(
+                "https://chat.whatsapp.com/BfRM70pDlas6Ysqg0Y8ajA",
+                "_blank"
+              )
+            }
+            className="md:hidden text-xs font-bold px-3 py-2 rounded-full bg-secondary text-white whitespace-nowrap"
+          >
+            Join Free Demo
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -112,22 +133,30 @@ export const Header = () => {
                   href={`#${item.href}`}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`flex items-center gap-1 font-semibold text-sm transition-colors ${
-                    isScrolled ? 'text-deep hover:text-secondary' : 'text-white hover:text-secondary'
+                    isScrolled
+                      ? "text-deep hover:text-secondary"
+                      : "text-white hover:text-secondary"
                   }`}
                 >
                   {item.name}
                   {item.dropdown && (
                     <ChevronDown
                       size={14}
-                      className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+                      className={`transition-transform ${
+                        isDropdownOpen ? "rotate-180" : ""
+                      }`}
                     />
                   )}
                 </a>
 
                 {item.dropdown && (
-                  <div className={`absolute top-full left-0 w-56 bg-white shadow-xl rounded-xl p-2 transition-all ${
-                    isDropdownOpen ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
-                  }`}>
+                  <div
+                    className={`absolute top-full left-0 w-56 bg-white shadow-xl rounded-xl p-2 transition-all ${
+                      isDropdownOpen
+                        ? "opacity-100 visible scale-100"
+                        : "opacity-0 invisible scale-95"
+                    }`}
+                  >
                     {item.dropdown.map((sub) => (
                       <a
                         key={sub.href}
@@ -146,18 +175,25 @@ export const Header = () => {
 
           {/* Desktop Enroll Button */}
           <div className="hidden md:flex items-center gap-6">
-            
-              <Button variant="primary" onClick={() =>
-                window.open("https://chat.whatsapp.com/BfRM70pDlas6Ysqg0Y8ajA", "_blank")
-              } className="h-[42px] px-6 text-sm">
-                <PlayCircle size={24} /> {t("btn_demo")}
-              </Button>
-           
+            <Button
+              variant="primary"
+              onClick={() =>
+                window.open(
+                  "https://chat.whatsapp.com/BfRM70pDlas6Ysqg0Y8ajA",
+                  "_blank"
+                )
+              }
+              className="h-[42px] px-6 text-sm"
+            >
+              <PlayCircle size={24} /> {t("btn_demo")}
+            </Button>
           </div>
 
           {/* Hamburger */}
           <button
-            className={`lg:hidden p-2 ${isScrolled ? 'text-primary' : 'text-white'}`}
+            className={`lg:hidden p-2 ${
+              isScrolled ? "text-primary" : "text-white"
+            }`}
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <Menu size={28} />
@@ -168,7 +204,6 @@ export const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-white dark:bg-zinc-950 flex flex-col items-center justify-center px-10 transition-all duration-300">
-          
           {/* Close Button */}
           <button
             onClick={() => setIsMobileMenuOpen(false)}
@@ -207,7 +242,11 @@ export const Header = () => {
             ))}
 
             {/* Mobile Enroll Button */}
-            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="w-full mt-10">
+            <a
+              href="#contact"
+              onClick={(e) => handleNavClick(e, "contact")}
+              className="w-full mt-10"
+            >
               <Button variant="primary" className="w-full h-14 text-xl">
                 Enroll Now
               </Button>
