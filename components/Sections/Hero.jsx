@@ -265,9 +265,9 @@ export const Hero = () => {
             <h3 className="text-xl lg:text-3xl font-heading font-extrabold text-primary dark:text-white mb-1 lg:mb-3 text-center">
               Powershell Automation Training
             </h3>
-            <p className="text-secondary text-sm lg:text-xl font-bold italic mb-6 lg:mb-10 text-center">
+            {/* <p className="text-secondary text-sm lg:text-xl font-bold italic mb-6 lg:mb-10 text-center">
               Professional Certification
-            </p>
+            </p> */}
 
             <div className="space-y-4">
               <div>
